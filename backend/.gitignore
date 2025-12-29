@@ -1,6 +1,8 @@
 #Node Modules
 node_modules/
 
-#Entornos
+# Entornos
 .env
+.env.*
+!.env.example
 .env.docker

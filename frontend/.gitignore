@@ -7,7 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Builds / dependencies
 node_modules
+node_modules/
 dist
 dist-ssr
 *.local
@@ -19,7 +21,12 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
-*.njsproj
-*.sln
 *.sw?
-.env.production
+
+# Entornos
+.env
+.env.*
+!.env.example
+!.env.development.example
+!.env.production.example
+.env.docker
