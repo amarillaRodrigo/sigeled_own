@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Afacad';
+  src: url(./fonts/Afacad-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 900;
+  font-style: normal; 
+}
+
+body{
+  background-color: #030C14;
+  font-family: 'Afacad';
+}
+
+* {
+  scrollbar-color: #2f4a60 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 1px; 
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2f4a60;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #030C14;
+  border-radius: 9999px;
+}

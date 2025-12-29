@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2161 2161">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #19f124;
+      }
+
+      .cls-2 {
+        font-family: Afacad-Medium, Afacad;
+        font-size: 447.71px;
+        font-variation-settings: 'wght' 500;
+        font-weight: 500;
+        letter-spacing: .05em;
+      }
+    </style>
+  </defs>
+  <g id="LOGO_1" data-name="LOGO 1">
+    <g id="Oscuro">
+      <g id="LETRAS">
+        <path class="cls-3" d="m1221.7,43.51c-194.52,0-352.22,157.69-352.22,352.22v793.61c0,39.85,32.3,72.15,72.15,72.15h0c39.85,0,72.15-32.3,72.15-72.15V395.73c0-114.83,93.09-207.92,207.92-207.92s207.92,93.09,207.92,207.92v793.61c0,39.85,32.3,72.15,72.15,72.15h0c39.85,0,72.15-32.3,72.15-72.15V395.73c0-194.52-157.69-352.22-352.22-352.22Z"/>
+        <path class="cls-1" d="m939.3,1542.16c194.52,0,352.22-157.69,352.22-352.22V396.34c0-39.85-32.3-72.15-72.15-72.15h0c-39.85,0-72.15,32.3-72.15,72.15v360.73s0,148.58,0,148.58v284.3c0,114.83-93.09,207.92-207.92,207.92-114.83,0-207.92-93.09-207.92-207.92v-284.3s0-148.58,0-148.58v-360.73c0-39.85-32.3-72.15-72.15-72.15h0c-39.85,0-72.15,32.3-72.15,72.15v793.61c0,194.52,157.69,352.22,352.22,352.22Z"/>
+      </g>
+    </g>
+  </g>
+  <g id="LOGO_2" data-name="LOGO 2">
+    <g id="OSCURO">
+      <g id="LETRAS-3" data-name="LETRAS">
+        <g id="TEXTO-2" data-name="TEXTO">
+          <text class="cls-2" transform="translate(268.73 2058.15)"><tspan x="0" y="0">SIGELED</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: sigeled_backend
+    restart: unless-stopped
+
+    env_file:
+      - ./backend/.env.docker
+
+    depends_on:
+      - n8n
+
+    ports:
+      - "4000:4000"
+
+    networks:
+      - app_net
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: sigeled_frontend
+    restart: unless-stopped
+
+    volumes:
+      - ./frontend/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+    networks:
+      - app_net
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: sigeled_n8n
+    restart: unless-stopped
+
+    ports:
+      - "5678:5678"
+
+    environment:
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - N8N_HOST=localhost
+      - NODE_ENV=production
+
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+
+    networks:
+      - app_net
+
+  nginx:
+    image: nginx:alpine
+    container_name: sigeled_nginx
+    restart: unless-stopped
+
+    depends_on:
+      - frontend
+      - backend
+      - n8n
+
+    ports:
+      - "80:80"
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge
