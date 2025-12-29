@@ -10,7 +10,8 @@ const getSocketURL = (apiUrl) => {
     return url.origin;
   } catch (error) {
     console.error("VITE_API_URL inválida:", apiUrl);
-    return 'http://localhost:4000';
+    return import.meta.env.VITE_API_URL;
+
   }
 };
 

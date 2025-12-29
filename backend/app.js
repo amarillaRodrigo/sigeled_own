@@ -33,11 +33,11 @@ const swaggerDefinition = {
     description: 'Documentación de la API para SIGELED',
   },
   servers: [
-    {
-      url: 'http://localhost:4000',
-      description: 'Servidor local',
-    },
-  ],
+  {
+    url: "https://sigeled.onrender.com",
+    description: "Servidor de producción"
+  }
+],
 };
 
 const options = {
@@ -54,8 +54,9 @@ import './utils/contracts-expiration.js'
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST", "PATCH"]
+    origin: process.env.FRONTEND_URL || "*",
+    methods: ["GET", "POST", "PATCH"],
+    credentials: true
   }
 });
 
@@ -90,7 +91,10 @@ export { io };
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*",
+  credentials: true
+}));
 app.use(express.json());
 app.use('/api/auth', authRouter);
 app.use('/api/docente', docenteRouter);
